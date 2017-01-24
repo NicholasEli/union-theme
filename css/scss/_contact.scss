@@ -1,0 +1,147 @@
+#contact-page{
+	section#contact-map{
+		padding: 30px 15px;
+		
+		img{
+			max-width: $desktop;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	section#contact-filter{
+		.container{
+			max-width: $tablet;
+
+			#filter-tabs{
+				ul{
+					display: flex;
+				    flex-direction: row;
+				    flex-wrap: wrap;
+					text-align: center;
+					li{
+						width: 50%;
+						float: left;
+						padding: 0px 5px;
+
+						@media (min-width: $phone){
+							padding: 0px 15px;
+						}
+
+						a{
+							height: 100%;
+							@include btn();
+							width: 100%;
+							font-size: 8px;
+
+							@media (min-width: $phone){
+								font-size: 11px;
+							}
+
+							@media (min-width: $tablet){
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	section#contact-info{
+		background-color: $gray;
+		text-align: center;
+		border-top: 1px solid $dk-gray;
+		border-bottom: 1px solid $dk-gray;
+
+		.container{
+			h4{
+				font-size: 26px;
+				text-transform: uppercase;
+			}
+
+			h6{
+				font-size: 16px;
+				text-transform: uppercase;
+				margin-bottom: 0px;
+			}
+
+			p{
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	section#contact-grid{
+		.container{
+			max-width: $desktop;
+			.filter-group{
+				height: 0px;
+				overflow: hidden;
+				opacity: 0;
+				display: flex;
+			    flex-direction: row;
+			    flex-wrap: wrap;
+				transition: opacity 500ms 500ms;
+				.grid{
+					width: 100%;
+					float: left;
+					@media (min-width: $tablet){
+						margin: 15px 0px;
+						width: 50%;
+						padding: 0px 5px;
+					}
+
+					.grid-inner{
+						width: 100%;
+						height: 100%;
+						float: left;
+
+						@media (min-width: $tablet){
+							border-top: 1px solid $dk-gray;
+							border-bottom: 1px solid $dk-gray;
+						}
+						padding: 15px 0px;
+						h3{
+							text-transform: uppercase;
+							color: $union;
+						}
+						h4{
+							color: $union;
+							font-size: 14px;
+							line-height: 16px;
+							margin-bottom: 10px;
+							text-transform: uppercase;
+						}
+
+						p{
+							margin-bottom: 0px;
+							line-height: 14px;
+							word-wrap: break-word;
+						}
+					}
+				}
+
+				.grid:nth-of-type(even){
+					border-bottom: 1px solid $dk-gray;
+
+					@media (min-width: $tablet){
+						border-bottom: none;
+					}
+				}
+			}
+
+			.filter-group:target{
+				height: auto;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+

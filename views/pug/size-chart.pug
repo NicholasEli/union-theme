@@ -1,0 +1,153 @@
+extends ./layout.pug
+block content
+	main#size-chart
+		section#page-header
+			h1 Size + Disk
+			p Choose the right binding
+		section#size-table
+			.container
+				table
+					thead
+						tr
+							th.type Binding Type
+							th Mn's
+							th Wn's
+							th.min Kid's
+					tbody
+						tr
+							td.type Binding Size
+							td 
+								div S
+								div M
+								div L
+							td 
+								div S
+								div M
+								div L
+							td.min
+								div S
+								div M
+						tr
+							td.type Mn's Boot Size
+							td 
+								div 5-8.5
+								div 8-11
+								div 10+
+							td 
+								div -
+								div -
+								div -
+							td.min 
+								div -
+								div -
+						tr
+							td.type Wn's Boot Size
+							td 
+								div -
+								div -
+								div - 
+							td 
+								div 3-6
+								div 5.5-9
+								div 8.5+
+							td.min 
+								div 3-6
+								div 5.5-9
+						tr
+							td.type EU Boot Size
+							td
+								div 37-41
+								div 40.5-44
+								div 43+
+							td 
+								div 34-37.5
+								div 37-41
+								div 40.5+
+							td.min 
+								div 34-37.5
+								div 37-41
+						tr
+							td.type UK Boot Size
+							td 
+								div 4-7.5
+								div 7-10
+								div 9+
+							td
+								div 15-4.5
+								div 4-7.5
+								div 7+
+							td.min 
+								div 1.5-4.5
+								div 4-7.5
+						tr.last
+							td.type Mondo Point
+							td 
+								div 230-265
+								div 260-290
+								div 280+
+							td 
+								div 210-235
+								div 230-265
+								div 260+
+							td.min 
+								div 210-235
+								div 230-265
+		section#universal-disks-patterns
+			.container
+				h3 Universal Disks And Insert Patterns
+				p There are a number of different ways to mount your bindings and a few different mounting systems to work with. Union currently offers two different disk types. Look below to find the right disc for your board.
+
+				p: span UNION BINDING COMPANY DISK TYPES:
+
+				div.disk
+					img(src="../images/minidisk.png")
+					h6 Minidisk
+					p Available On:
+					p Ultra FC, Ultra, Contact Pro, Contact, Legacy, Millan
+				div.disk
+					img(src="../images/universal-disk.png")
+					h6 Universal Disk
+					p Available On:
+					p All other Union Bindings
+		section#disk-compatabilty
+			.container
+				h6 DISK COMPATIBILITY CHART:
+
+				div.disk
+					img(src="../images/2x4-pattern.png")
+					h6 2X4 INSERT PATTERN
+					p Compatible with:
+					p All New Disk, Minidisk
+				div.disk
+					img(src="../images/3d-pattern.png")
+					h6 3D INSERT PATTERN
+					p Not Compatible
+					p with Union Bindings
+				div.disk
+					img(src="../images/4x4-pattern.png")
+					h6 4X4 INSERT PATTERN
+					p Compatible with:
+					p All New Disk
+				div.disk
+					img(src="../images/channel-pattern.png")
+					h6 CHANNEL INSERT PATTERN
+					p Compatible with:
+					p All New Disk, Minidisk
+		section#further-questions
+			.container
+				p If you have any further questions about disk compatibility,
+				p please call us at 206-632-1601
+
+
+
+
+
+
+
+
+
+
+
+
+
+

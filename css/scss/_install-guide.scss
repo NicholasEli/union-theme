@@ -1,0 +1,153 @@
+#install-page{
+	section#install-video{
+		div.container{
+			max-width: 1000px;
+			padding-bottom: 0px;
+			iframe{
+				margin: 0px;
+				opacity: 0;
+				transition: opacity 1s 1s;
+			}
+		}
+	}
+	section#install-pdf{
+		text-align: center;
+		.container{
+			max-width: 1000px;
+			padding-bottom: 30px;
+			h6{
+				color: $union;
+				font-size: 13px;
+				line-height: 13px;
+				margin: 0px;
+			}
+
+			p{
+				a{
+					color: $union;
+				}
+			}
+
+			#pdf{
+				width: 100%;
+				float: left;
+
+				@media (min-width: $tablet){
+					width: 50%;
+				}
+
+				#pdf-link{
+					@include btn();
+					width: auto;
+					padding: 5px;
+					font-size: 13px;
+					margin: 15px 0px;
+
+					@media (min-width: $tablet){
+						width: auto;
+						margin: 5px;
+					}
+				}
+			}
+			
+			div#info{
+				width: 100%; 
+				float: left;
+					@media (min-width: $tablet){
+						width: 50%;
+					}
+
+				div#phone{
+					@media (min-width: $tablet){
+						margin-bottom: 10px;
+					}
+				}
+
+				div#email{
+					p{
+						margin: 0px;
+					}
+				}
+
+				div#hours{
+
+				}
+			}
+
+			div#keep-scrolling{
+				display: none;
+				width: 100%;
+				float: left;
+				padding: 30px 0px 0px 0px;
+
+				@media (min-width: $tablet){
+					display: block;
+				}
+
+				p{
+					font-size: 26px;
+					line-height: 26px;
+					color: $lt-gray;
+				}
+
+				i{
+					font-size: 26px;
+					color: $lt-gray;
+					border: 3px solid $lt-gray;
+					border-radius: 100%;
+					padding: 10px;
+				}
+			}
+		}
+	}
+	section#congratulations{
+		background-color: $gray;
+		text-align: center;
+		border-top: 1px solid $dk-gray;
+		border-bottom: 1px solid $dk-gray;
+		.container{
+			max-width: $tablet;
+		}
+	}
+	section.install-steps{
+		.step{
+			text-align: center;
+			.container{
+				max-width: $phone;
+				padding-top: 45px;
+				h3{
+					text-transform: uppercase;
+				}
+
+				img.sm{
+					max-width: 320px;
+				}
+
+				img.lg{
+					max-width: $phone;
+				}
+			}
+
+			.fadein-text{
+				background-color: $gray;
+				border-top: 1px solid $dk-gray;
+				border-bottom: 1px solid $dk-gray;
+				.container{
+					max-width: 660px;
+					padding-top: 30px;
+					padding-bottom: 30px;
+					p{
+						color: $dk-gray;
+						font-size: 14px;
+						line-height: 18px;
+						margin-bottom: 10px;
+						@include light;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+

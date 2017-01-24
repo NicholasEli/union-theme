@@ -1,0 +1,106 @@
+main#team {
+    section#team-banner {
+        text-align: center;
+        background-image: url("../images/team/team-banner.jpg");
+        background-repeat: no-repeat;
+        background-size: calc(100% + 400px);
+        background-position: center 0px;
+        img {
+            float: left;
+            opacity: 0;
+        }
+        div.container {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0px;
+            h2 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                margin: 0px;
+                font-size: 10vw;
+                text-transform: uppercase;
+                font-weight: 900;
+                color: #fff;
+            }
+            h3 {
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                margin: 7% 0px 0px 0px;
+                font-size: 1.7vw;
+                text-transform: uppercase;
+                color: #fff;
+            }
+        }
+    }
+    section#riders {
+        div.container {
+            div#rider-grid {
+                width: 100%;
+                float: left;
+                a.rider{
+                    &:hover {
+                        div.rider-name {
+                            background-color: $dk-gray;
+                            p {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                .rider {
+                    width: 50%;
+                    float: left;
+                    margin: 0px;
+                    @media (min-width: $tablet) {
+                        width: calc(100% / 3);
+                    }
+                    @media (min-width: $tablet) {
+                        width: calc(100% / 4);
+                    }
+                    @media (min-width: 1200px) {
+                        width: calc(100% / 6);
+                    }
+                    img {
+                        padding: 5px;
+                        transition: all 200ms;
+                    }
+                    div.rider-name {
+                        width: calc(100% - 10px);
+                        height: 20px;
+                        position: absolute;
+                        bottom: 0px;
+                        left: 5px;
+                        text-align: center;
+                        background-color: #E6E7E8;
+                        transition: all 200ms;
+                        p {
+                            color: $union;
+                            font-size: 10px;
+                            padding-top: 2px;
+                            margin: 0px;
+                            text-transform: uppercase;
+                            transition: all 200ms;
+                        }
+                    }
+                }
+                a.pro, div.pro {
+                    div.rider-name {
+                        background-color: $union;
+                        p {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

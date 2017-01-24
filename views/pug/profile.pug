@@ -1,0 +1,113 @@
+extends ./layout.pug
+block content
+	main#profile
+		section#page-header
+			h1 THE TEAM
+			p 2016 / 2017 PRO RIDERS
+		section#profile-slider
+			div.swiper-container
+				div.swiper-wrapper
+					div.swiper-slide
+						div(data-swiperIMG="../images/team/team-slider-img.jpg").swiper-overlay
+					div.swiper-slide
+						div(data-swiperIMG="../images/team/team-slider-img.jpg").swiper-overlay
+					div.swiper-slide
+						div(data-swiperIMG="../images/team/team-slider-img.jpg").swiper-overlay
+				div.swiper-pagination
+				div.swiper-button-prev
+				div.swiper-button-next
+		section#rider-profile
+			div.container
+				div#profile-left
+					img(src="http://placehold.it/100x100")
+				div#profile-right
+					div#rider-bio
+						h2 BRYAN IGUCHI
+						h6 JACKSON HOLE, WYOMING
+						p "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+					div#profile-flex-wrapper 
+						div#profile-info
+							p.stats Info:
+							ul.stats
+								li HOMETOWN: 
+									span JACKSON HOLE, WYO
+								li BIRTHDAY: 
+									span XX.XX.XX
+								li LOCAL RESORT: 
+									span JACKSON HOLE
+								li REGULAR OR GOOFY: 
+									span GOOFY
+								li SPONSORS: 
+									span UNION, DC, ROCKSTAR, OAKLEY, AWSM, GO PRO, KICKER, KEYSTONE RESORT
+							p.riding Riding:
+							ul.riding
+								li Union Contact Pro
+								li Union Atlas
+						div#profile-media
+							p Instagram: 
+							div#ig-images
+								div
+									img(src="http://placehold.it/100x100")
+								div 
+									img(src="http://placehold.it/100x100")
+								div 
+									img(src="http://placehold.it/100x100")
+							div#follow
+								p Follow:
+								ul
+									li 
+										a
+											i.fa.fa-facebook
+									li
+										a
+											i.fa.fa-twitter
+									li
+										a
+											i.fa.fa-instagram
+									li
+										a
+											i.fa.fa-link
+		section#additional-riders
+			div.container
+				h3 ADDITIONAL PRO RIDERS:
+				div#rider-grid
+					a.rider
+						img(src="http://placehold.it/260x260")
+						div.rider-name
+							p Torstein Horgmo
+					a.rider.pro
+						img(src="http://placehold.it/260x260")
+						div.rider-name
+							p Johnny O'Connor 
+					a.rider
+						img(src="http://placehold.it/260x260")
+						div.rider-name
+							p Kuso
+					a.rider
+						img(src="http://placehold.it/260x260")
+						div.rider-name
+							p Nic Harvey
+					a.rider
+						img(src="http://placehold.it/260x260")
+						div.rider-name
+							p Mike Rav
+					a.rider
+						img(src="http://placehold.it/260x260")
+						div.rider-name
+							p Arthur Longo
+					a.rider
+						img(src="http://placehold.it/260x260")
+						div.rider-name
+							p Chase Josey 
+					a.rider
+						img(src="http://placehold.it/260x260")
+						div.rider-name
+							p Brendan Gerard
+					a.rider
+						img(src="http://placehold.it/260x260")
+						div.rider-name
+							p Brandon Cocard
+					a.rider
+						img(src="http://placehold.it/260x260")
+						div.rider-name
+							p Durell Williams

@@ -1,0 +1,103 @@
+.flip-container{
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+    border-radius: 100%;
+    //background-color: $union;
+    &:hover #flipper, #flip-container.hover #flipper {
+        //transform: rotateY(180deg);
+    }
+    /* flip speed goes here */
+    #flipper {
+        opacity: 0;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        transition: 0.6s;
+        transform-style: preserve-3d;
+    }
+
+    .flipper-animate{
+        opacity: 1 !important;
+        @keyframes flipAnimation{
+            from{transform: rotateY(0deg);}
+            to{transform: rotateY(360deg);}
+        }
+
+        #blink{
+            animation: backAnimation 1s linear infinite alternate;
+
+            @keyframes backAnimation{
+                0%{opacity: 0;}
+                20%{opacity: 1;}
+                80%{opacity: 1;}
+                100%{opacity: 0;}
+            }
+        }
+    }   
+
+    /* hide back of pane during swap */
+    #front, #blink {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        //background-color: $union;
+        &::after{
+            content: '';
+            width: 100px;
+            height: 25px;
+            position: absolute;
+            bottom: -30px;
+            left: 0px;
+            border-radius: 100%;
+            background-image: radial-gradient($lt-gray, #fff);
+            background-size: 80px 15px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            opacity: 0.1;
+            //animation: flipAnimation 1s linear infinite alternate;
+
+            @keyframes flipAnimation{
+                from{transform: rotateY(0deg);}
+                to{transform: rotateY(180deg);}
+            }
+        }
+    }
+
+    
+    /* back, initially hidden pane */
+    #blink {
+            opacity: 0;
+            //transform: rotateY(180deg);
+            background-image: url('../images/union-icon.svg');
+            background-repeat: no-repeat;
+            background-size: 40px 40px;
+            background-position: center center;
+    }
+}
+
+.animationActive{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    background-color: #fff;
+    z-index: 2;
+    #load-more-btn{
+        border-color: $union !important;
+    }
+    #load-more-text{
+        display: none !important;
+    }
+}

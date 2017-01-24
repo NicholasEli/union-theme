@@ -1,0 +1,206 @@
+main#dealer-locator{
+	section#dealer-map{
+		margin-bottom: 30px;
+		.storemapper-loader img, .storemapper-loader img[style] {display:none !important;}
+		.storemapper-loader{
+		 min-height: calc(100vh - 295px) !important;
+		 background: url("../images/map/union-loader.gif");
+		 background-repeat: no-repeat;
+		 background-position: center center;
+		 background-size: 100px 100px;
+		}
+		div#storemapper{
+			float: left;
+			img[src="https://maps.gstatic.com/mapfiles/api-3/images/google_white5.png"], .gmnoprint span, a[href="https://www.google.com/intl/en-US_US/help/terms_maps.html"],
+			a[target="_new"]{
+				display: none;
+			}
+			#storemapper-right{
+				height: 300px !important;
+				@media (min-width: $tablet){
+					height: 400px !important;
+				}
+				#locate{
+					background-color: $union !important;
+					#search_button{
+						display: block;
+						margin: 5px 0px 0px 5px;
+						color: #fff;
+
+						&:hover{
+							text-decoration: none;
+						}
+					}
+				}
+				.storemapper-popup-phone a, .storemapper-popup-url a, .storemapper-maplink,
+				.storemapper-map-directions{
+					color: $union;
+				}
+			}
+			#storemapper-left{
+				@include container();
+				max-width: $lgScreen;
+				padding: 15px;
+				float: none !important;
+				@media (min-width: $tablet){
+					height: auto !important;
+				}
+				form#storemapper-form{
+					@media (min-width: $tablet){
+						width: $lgPhone;
+						height: auto;
+						overflow: hidden;
+						margin: 0 auto 15px;
+					}
+					.storemapper-categories{
+						display: none;
+					}
+
+					#storemapper-zip{
+						@include book;
+						@media (min-width: $tablet){
+							width: calc(100% - 100px);
+							float: left;
+						}
+					}
+
+					button#storemapper-go{
+						width: 100%;
+						@include book;
+						margin-bottom: 15px;
+						@media (min-width: $tablet){
+							width: 90px;
+							float: right;
+							margin: 0px;
+						}
+					}
+
+					label{
+						display: none;
+					}
+				}
+
+				ul#storemapper-list{
+					max-width: 1200px;
+					margin: 0 auto;
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
+					li{
+						width: 100%;
+						float: left;
+						padding-bottom: 15px;
+						@media (min-width: $phone){
+							width: 50%;
+							border-right: 15px solid #fff;
+							border-left: 15px solid #fff;
+						}
+
+						@media (min-width: $tablet){
+							width: calc(100% / 3);
+						}
+
+						@media (min-width: $desktop){
+							width: 25%;
+						}
+						h4{
+							font-size: 12px;
+							line-height: 14px;
+							text-transform: uppercase;
+							color: $union;
+						}
+
+						p, a{
+							font-size: 12px;
+							line-height: 14px;
+							text-transform: uppercase;
+							color: $dk-gray;
+						}
+
+						a{
+							&:hover{
+								text-decoration: none;
+								color: darken($union, 20%);
+							}
+						}
+
+						.storemapper-address{
+							min-height: 30px;
+							margin-bottom: 5px;
+						}
+						.storemapper-url a, .storemapper_view a, .storemapper_directions a{
+							color: $union;
+
+						}
+
+						.storemapper-distance, .storemapper_view, .storemapper_directions{
+							display: inline;
+						}
+
+						.storemapper_view a, .storemapper_directions a{
+							font-style: italic;
+
+							&::before{
+								content: " - ";
+								color: $dk-gray;
+							}
+						}
+					}
+				}
+			}
+
+			#storemapper-left::-webkit-scrollbar{
+				background-color: transparent;
+				border: 1px solid $union;
+			}
+
+			#storemapper-left::-webkit-scrollbar-track {
+			    box-shadow: none;
+			    background-color: transparent;
+			}
+			 
+			#storemapper-left::-webkit-scrollbar-thumb {
+			  background-color: $union;
+			}
+		}	
+	}
+
+	section#shop-online{
+		div.container{
+			max-width: $lgScreen;
+			#online-partners{
+					width: 100%;
+					float: left;
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
+					justify-content: center;
+				a{
+					width: 50%;
+					float: left;
+					display: none;
+					opacity: 0;
+					transition: opacity 200ms;
+					@media (min-width: $tablet){
+						width: calc(100% / 3);
+					}
+
+					@media (min-width: $desktop){
+					 	width: 25%;
+					}
+
+					img{
+						padding: 15px;
+					}
+
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+

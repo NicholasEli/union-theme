@@ -1,0 +1,15 @@
+name = Union Bindings 2016/2017 1617
+description = Union Bindings Responsive Drupal Theme 2016/2017 developed by PAIRODIME. <a href="http://www.pairodime.com">pairodime.com</a>
+core = 7.x
+
+regions[content] = Content
+stylesheets[all][] = bower_components/Swiper/dist/js/swiper.min.css
+stylesheets[all][] = bower_components/fontawesome/css/font-awesome.min.css
+stylesheets[all][] = css/style.css
+
+scripts[] = bower_components/fastclick/lib/fastclick.js
+scripts[] = bower_components/Swiper/dist/js/swiper.min.js
+scripts[] = bower_components/progressbar/dist/progressbar.min.js
+scripts[] = bower_components/js-url/url.min.js
+scripts[] = js/smooth-scroll.min.js
+scripts[] = js/script.js

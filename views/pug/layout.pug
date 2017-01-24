@@ -1,0 +1,101 @@
+doctype html
+html(lang="en")
+     head
+          title Union Binding Company
+          meta(name="viewport", content="width=device-width, initial-scale=1")
+          link(href="../bower_components/Swiper/dist/css/swiper.min.css", rel='stylesheet')
+          link(href="../bower_components/fontawesome/css/font-awesome.min.css", rel='stylesheet')
+          link(href="../css/style.css", rel='stylesheet')
+     body
+
+          div#mobile-nav
+               nav#mobile-nav-wrapper
+                    ul
+                         li: a(href="bindings.html") Bindings
+                         li(data-collapse="technology").collapse: a Technology
+                              img(src="../images/nav-aria-down-gray.svg", data-dropdown="support").dropdown-aria
+                         li#technology-collapse.mobile-collapse
+                              ul
+                                   li: a(href="#") 100% Focus
+                                   li: a(href="#") Total Innovation
+                                   li: a(href="#") Materials
+                                   li: a(href="#") Adjustments
+                                   li: a(href="#") Duraflex
+                                   li: a(href="#") Trueflex
+                                   li: a(href="#") Forged Carbon
+                         li: a Team
+                         li: a Social
+                         li(data-collapse="support").collapse: a Support
+                              img(src="../images/nav-aria-down-gray.svg", data-dropdown="support").dropdown-aria
+                         li#support-collapse.mobile-collapse
+                              ul
+                                   li: a(href="#") Contct Us
+                                   li: a(href="#") Warranty / Specialty
+                                   li: a(href="#") Size Charts
+                                   li: a(href="#") How To Setup Your Union Bindings
+                                   li: a(href="#") Faq's
+                                   li: a(href="#") Where To Buy
+                         li: a Contact
+
+
+          div#nav-menu
+               div#nav-icon
+                    img(src="../images/union-icon.svg")
+
+               div#nav-menu-wrapper
+                    nav
+                         div#nav-left
+                              ul
+                                   li: a(href="bindings.html") Bindings
+                                   li(data-dropdown="technology").dropdown-branch
+                                        a Technology
+                                             img(src="../images/nav-aria-down.svg", data-dropdown="technology")#technology-aria.dropdown-aria
+                                             div#technology-dropdown.dropdown-leaf
+                                                  ul
+                                                       li: a(href="#") 100% Focus
+                                                       li: a(href="#") Total Innovation
+                                                       li: a(href="#") Materials
+                                                       li: a(href="#") Adjustments
+                                                       li: a(href="#") Duraflex
+                                                       li: a(href="#") Trueflex
+                                                       li: a(href="#") Forged Carbon
+                                   li: a Team
+
+                         div#nav-middle
+                              h2 Union Binding Co.
+
+                         div#nav-right
+                              ul
+                                   li: a Social
+                                   li(data-dropdown="support").dropdown-branch
+                                        a Support
+                                             img(src="../images/nav-aria-down.svg", data-dropdown="support")#support-aria.dropdown-aria
+                                             div#support-dropdown.dropdown-leaf
+                                                  ul
+                                                       li: a(href="#") Contct Us
+                                                       li: a(href="#") Warranty / Specialty
+                                                       li: a(href="#") Size Charts
+                                                       li: a(href="#") How To Setup Your Union Bindings
+                                                       li: a(href="#") Faq's
+                                                       li: a(href="#") Where To Buy
+                                   li: a Contact
+
+               div#mobile-menu-btn
+                    div#menu-bar-top
+                    div#menu-bar-middle
+                    div#menu-bar-bottom
+
+          block content
+
+          footer
+               div#stronger
+                    img(src="../images/stronger.svg")
+
+               div#email-signup
+                    a(href="#") Email Signup
+
+               div#copy-right
+                    p © 2016-2017 Union Binding Company / Core Srl. All rights reserved. Colico, Italy / Seattle USA
+          script(src="../node_modules/move-js/move.js")
+          script(src="../bower_components/Swiper/dist/js/swiper.min.js")
+          script(data-main="../js/script" src="../js/require.js")

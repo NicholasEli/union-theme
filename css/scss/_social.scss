@@ -1,0 +1,379 @@
+main#social {
+    overflow-x: hidden;
+
+    .item-list {
+        width: 100%;
+        float: left;
+    }
+
+    section#page-header {
+        height: 180px;
+        border-bottom: 1px solid $dk-gray;
+
+        form {
+            width: calc(100% - 10px);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 100%);
+
+            @media (min-width: $lgPhone) {
+                top: 70%;
+            }
+
+            @media (min-width: $tablet) {
+                top: 70%;
+            }
+
+            div {
+                width: calc(100% / 3);
+                display: inline;
+                margin: 0px 15px;
+                white-space: nowrap;
+
+                @media (min-width: $tablet) {
+                    width: 100%;
+                }
+
+                label {
+                    @include book;
+
+                    font-size: 12px;
+                    display: inline;
+                    vertical-align: middle;
+                    text-transform: uppercase;
+                    transition: all 200ms;
+
+                    &::before {
+                        font-family: FontAwesome;
+                        content: '\f096';
+                        position: absolute;
+                        left: -24px;
+                        top: 0px;
+                        width: 25px;
+                        height: 25px;
+                        color: $dk-gray;
+                        transition: all 800ms;
+                        font-size: 15px;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                input[type="checkbox"] {
+                    display: inline;
+                    vertical-align: middle;
+                    opacity: 0;
+                    z-index: 2;
+                    margin: 0px;
+
+                    &:hover {
+                        cursor: pointer;
+
+                        ~ label {
+                            color: $union;
+
+                            &::before {
+                                color: $union;
+                                content: '\f046';
+                            }
+                        }
+                    }
+                }
+
+                input[type="checkbox"] {
+                    &:checked {
+                        ~ label {
+                            color: $union;
+
+                            &::before {
+                                content: '\f046';
+                                color: $union;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section#social-feed {
+        div.container {
+            @media (min-width: 1079px) {
+                padding: 15px 0px;
+                max-width: none;
+            }
+
+            aside#social-sidebar {
+                width: 100%;
+                float: left;
+                text-align: center;
+                border-bottom: 1px solid $dk-gray;
+                margin-bottom: 30px;
+                padding: 10px 0px;
+                z-index: 2;
+
+                @media (min-width: 1079px) {
+                    width: 200px;
+                    position: absolute;
+                    top: 70px;
+                    left: 06.622516556291391%;
+                    margin-left: -30px;
+                    border-top: 1px solid $dk-gray;
+                }
+
+                @media (min-width: $final) {
+                    margin-left: 0px;
+                }
+
+                #hashtag {
+                    width: 100%;
+                    float: left;
+
+                    a {
+                        font-size: 11px;
+
+                        @include medium;
+
+                        color: #000;
+                        text-transform: uppercase;
+
+                        &:hover {
+                            color: $union;
+                        }
+                    }
+                }
+
+                #ig-feed {
+                    width: 100%;
+                    float: left;
+
+                    div.ig-img {
+                        width: calc(25% - 5px);
+                        height: 100px;
+                        margin: 2.5px;
+                        float: left;
+                        overflow: hidden;
+
+                        @media (min-width: $lgPhone) {
+                            height: 150px;
+                        }
+
+                        @media (min-width: 1079px) {
+                            width: 95px;
+                            height: 95px;
+                        }
+
+                        img {
+                            width: auto;
+                            max-width: none;
+                            height: 200%;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+
+                #follow {
+                    width: 100%;
+                    float: left;
+                    text-align: center;
+                    padding-left: 5px;
+
+                    @media (min-width: 1079px) {
+                        text-align: left;
+                    }
+
+                    p {
+                        @include medium;
+
+                        font-size: 11px;
+                        color: #000;
+                        text-transform: uppercase;
+                    }
+
+                    a {
+                        display: block;
+                        transition: all 200ms;
+
+                        &:hover {
+                            span, i {
+                                color: $union;
+                            }
+                        }
+
+                        i {
+                            color: $dk-gray;
+                            font-size: 16px;
+                            transition: all 200ms;
+                        }
+
+                        span {
+                            color: $dk-gray;
+
+                            @include light;
+
+                            padding-left: 5px;
+                            text-transform: uppercase;
+                            transition: all 200ms;
+                        }
+                    }
+                }
+            }
+
+            div#feed {
+                width: 100%;
+                float: left;
+                height: auto;
+                overflow: hidden;
+
+                div.post {
+                    width: 100%;
+                    float: left;
+                    text-align: center;
+                    margin-bottom: 60px;
+                    transition: all 2s;
+
+                    &:after {
+                        content: "";
+                        width: 100vw;
+                        height: 1px;
+                        position: absolute;
+                        bottom: -30px;
+                        right: 0px;
+                        background-color: $dk-gray;
+                    }
+
+                    .post-wrapper {
+                        width: 100%;
+                        max-width: $final;
+                        float: left;
+
+                        @media (min-width: 1079px) {
+                            width: 55.96026490066225%;
+                            float: none;
+                            margin: auto;
+                        }
+
+                        .post-title {
+                            width: 100%;
+                            float: left;
+                            margin-bottom: 15px;
+
+                            a {
+                                &:hover {
+                                    h2 {
+                                        color: $union;
+                                    }
+                                }
+
+                                h2 {
+                                    color: $dk-gray;
+                                    text-transform: uppercase;
+                                    margin-bottom: 0px;
+                                    transition: all 200ms;
+                                }
+                            }
+                        }
+
+                        article.post-video-text {
+                            width: 100%;
+                            float: left;
+                            margin-bottom: 15px;
+
+                            h1, h2, h3,
+                            h4, h5, h6,
+                            p, span, li,
+                            th, td {
+                                color: #000;
+                                text-transform: uppercase;
+                            }
+
+                            a {
+                                color: $union;
+
+                                &:hover {
+                                    color: $lt-gray;
+                                }
+                            }
+
+                            p {
+                                text-transform: uppercase;
+                                margin-bottom: 10px;
+                            }
+
+                            .media_embed, iframe {
+                                position: relative;
+                                min-height: 160px;
+                                height: 31vw;
+                                max-height: 720px;
+                            }
+                        }
+
+                        .date {
+                            width: 100%;
+                            float: left;
+
+                            p {
+                                color: $dk-gray;
+                                margin: 0px;
+                            }
+                        }
+                    }
+                }
+
+                div.post:last-of-type {
+                    margin-bottom: 0px;
+
+                    &::after {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+
+    section#load-more {
+        height: 110px;
+
+        div#load-more-btn {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            border: 1px solid $dk-gray;
+
+            @include light;
+
+            color: $dk-gray;
+            border-radius: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 12px;
+            transition: all 200ms;
+
+            #load-more-text {
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                display: block;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+main#social.social-inner {
+    section#social-feed div.container div#feed div.post .post-wrapper article.post-video-text .media_embed,
+    div.container div#feed div.post .post-wrapper article.post-video-text iframe {
+        position: absolute;
+        width: 100%;
+        min-height: none;
+        height: 100%;
+        max-height: none;
+    }
+}

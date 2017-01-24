@@ -1,0 +1,123 @@
+main#forged-carbon {
+    section#mindset {
+        p {
+            span {
+            	color: $union;
+                a {
+                    color: $union;
+
+                    &:hover{
+                    	color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    section#grid {
+        div.container {
+            .grid-item {
+                width: 100%;
+                padding: 15px;
+                margin: 45px 0px;
+                &::before {
+                    top: 0px;
+                }
+                @media (min-width: 400px) {
+                    max-width: 390px;
+                }
+                .grid-border {
+                    .grid-text {
+                        margin-bottom: 15px;
+                    }
+                    .grid-bar-graph {
+                        width: 100%;
+                        float: left;
+                        .graph-container {
+                            width: 100%;
+                            float: left;
+                            div.graph {
+                                width: 100%;
+                                margin-bottom: 15px;
+                                float: left;
+                                display: flex;
+                                flex-wrap: wrap;
+                                flex-direction: row;
+                                .graph-title {
+                                    width: 50%;
+                                    float: left;
+                                    margin: 0px;
+                                    font-size: 12px;
+                                    line-height: 18px;
+                                    text-align: right;
+                                    text-transform: uppercase;
+                                    @include book;
+                                }
+                                .graph-bar {
+                                    width: 50%;
+                                    float: left;
+                                    height: 10px;
+                                    .bar {
+                                        width: 0%;
+                                        max-width: calc(100% - 5px);
+                                        height: 100%;
+                                        position: absolute;
+                                        top: 4px;
+                                        left: 5px;
+                                        background: linear-gradient(90deg, #f28435 75%, #f15325 100%);
+                                        transition: all 600ms 1s;
+                                        transition-timing-function: ease-in;
+                                    }
+                                }
+                            }
+                            div.graph:nth-of-type(1) {
+                                .graph-bar {
+                                    .bar {
+                                       max-width: 40%;
+                                       transition: all 1s 1s;
+                                    }
+                                }
+                            }
+                            div.graph:nth-of-type(2) {
+                                .graph-bar {
+                                    .bar {
+                                        max-width: 75%;
+                                        transition: all 800ms 1s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                #load-carrying-capacity{
+                    position: absolute;
+                    left: 15px;
+                    bottom: -25px;
+                    @include book;
+                    text-align: left;
+                    text-transform: uppercase;
+                }
+            }
+            .grid-graph-key {
+                width: calc(50% - 20px);
+                height: 5px;
+                position: absolute;
+                right: 12px;
+                bottom: 15px;
+                background-image: repeating-linear-gradient(to right, $dk-gray, $dk-gray 1px, transparent 1px, transparent 17px);
+            }
+        }
+    }
+    section#panel {
+        svg {
+            width: 15.364238410596026%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            * {
+                fill: #DFDFE0;
+            }
+        }
+    }
+}

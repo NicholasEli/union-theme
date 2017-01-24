@@ -1,0 +1,106 @@
+@mixin light {
+    font-family: 'Gotham A', 'Gotham B';
+    font-weight: 300;
+    font-style: normal;
+}
+
+@mixin book {
+    font-family: 'Gotham A', 'Gotham B';
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin medium {
+    font-family: 'Gotham A', 'Gotham B';
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin bold {
+    font-family: 'Gotham A', 'Gotham B';
+    font-weight: 700;
+    font-style: normal;
+}
+
+@mixin black {
+    font-family: 'Gotham A', 'Gotham B';
+    font-weight: 800;
+    font-style: normal;
+}
+
+@mixin pageHeader($sm, $m, $lg, $color){
+    padding-top: 30px;
+    padding-bottom: 25px;
+    font-size: $sm;
+    line-height: $sm;
+    text-transform: uppercase;
+    margin: 0px;
+    color: $color;
+    @media (min-width: $lgPhone) {
+        font-size: $m;
+        line-height: $m;
+    }
+    @media (min-width: $desktop) {
+        font-size: $lg;
+        line-height: $lg;
+    }
+}
+
+@mixin btn {
+    display: inline-block;
+    padding: 12px;
+    border: 1px solid $union;
+    border-radius: 6px;
+    font-size: 11px;
+    text-transform: uppercase;
+    transition: all 200ms;
+    color: $dk-gray;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    user-select: none;
+    background-image: none;
+    &:hover {
+        background-color: $union;
+        color: #fff;
+        cursor: pointer;
+    }
+    @media (min-width: $tablet) {
+        width: 150px;
+        font-size: 12px;
+    }
+}
+
+@mixin container(){
+    width: 100%;
+    max-width: $final;
+    margin: 0 auto;
+
+    &::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin inputStyle {
+    input[type="text"], input[type="email"], select {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+        font-size: 14px;
+        padding: 10px 10px;
+        appearance: none;
+        border-radius: 0;
+        background-color: $lt-gray;
+        border-style: solid;
+        border-width: 0;
+        border-color: #cccccc;
+        color: $dk-gray;
+
+        &:placeholder{
+            color: $dk-gray;
+        }
+    }
+}

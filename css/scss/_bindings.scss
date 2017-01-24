@@ -1,0 +1,167 @@
+#bindings-page {
+    overflow-x: hidden;
+    section#bindings-filter {
+        border-bottom: 1px solid $lt-gray;
+        div.container {
+        	padding-top: 30px;
+        	padding-bottom: 25px; 
+            #filter-title {
+                text-align: center;
+                text-transform: uppercase;
+                h6 {
+                    @include book;
+                    font-size: 21px;
+                    margin-bottom: 30px;
+                }
+            }
+            #filter-tabs {
+                margin: 0 auto;
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    text-align: center;
+
+                    li {
+                        display: inline;
+                        margin: 0px 2.5px 10px;
+                        .filter-tab {
+                            @include btn;
+                            width: auto;
+                            margin: 0px;
+                        }
+                        .filter-tab-active {
+                            background-color: $union;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section#bindings-grid {
+        margin-bottom: 50px;
+        .container {
+        	padding: 0px;
+            .section-title {
+                width: 100%;
+                float: left;
+                margin: 0px;
+                padding-top: 30px;
+            }
+            .filter-group {
+                width: 100%;
+                float: left;
+                padding-bottom: 15px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                transition: all 200ms;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0px;
+                    left: 50%;
+                    width: 100vw;
+                    height: 1px;
+                    transform: translateX(-50%);
+                    background-color: $lt-gray;
+                }
+                .binding {
+                    width: 50%;
+                    float: left;
+                    padding: 9px;
+                    margin-bottom: 15px;
+                    &:hover {
+                        cursor: pointer;
+                        .binding-display img {
+                            transform: scale(1.05, 1.05) translateY(-10px);
+                        }
+                    }
+                    @media (min-width: $tablet) {
+                        width: calc(100% / 3);
+                    }
+                    @media (min-width: $desktop) {
+                        width: calc(100% / 4);
+                    }
+                    .special-feature-icon {
+                        width: 30px;
+                        height: 30px;
+                        position: absolute;
+                        top: 0px;
+                        right: 0px;
+                        z-index: 2;
+
+                        @media (min-width: $tablet){
+                            width: 60px;
+                        height: 60px;
+                        }
+                        img {
+                            margin-bottom: 5px;
+                            transform: translateZ(0);
+                        }
+                    }
+                    .binding-display {
+                        border-bottom: 2px solid $dk-gray;
+                        margin-bottom: 15px;
+                        img {
+                            display: block;
+                            transition: all 200ms;
+                        }
+                    }
+                    .binding-name {
+                        margin-bottom: 5px;
+                        h6 {
+                            text-transform: uppercase;
+                            font-size: 12px;
+                            margin-bottom: 0px;
+                            @include book;
+                            @media (min-width: $tablet) {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                    .binding-tagline {
+                        p {
+                            font-size: 10px;
+                            line-height: 10px;
+                            text-transform: uppercase;
+                        }
+                    }
+                    .colorways {
+                        label {
+                            @include book;
+                            font-size: 10px;
+                            margin: 0px 5px 0px 0px;
+                            text-transform: uppercase;
+                            @media (min-width: $tablet) {
+                                width: 85px;
+                                float: left;
+                            }
+                        }
+                        img {
+                            width: 10px;
+                            height: 10px;
+                            float: left;
+                            overflow: hidden;
+                            margin: 4px 10px 0px 0px;
+                            border-radius: 100%;
+                            transition: all 0.5s ease;
+                            border: 2px solid $dk-gray;
+                        }
+                    }
+                }
+            }
+            .filter-group:last-of-type {
+                &::after {
+                    content: none;
+                }
+            }
+            .noBorder {
+                &::after {
+                    content: none;
+                }
+            }
+        }
+    }
+}

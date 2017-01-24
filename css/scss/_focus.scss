@@ -1,0 +1,11 @@
+main#focus {
+    section#hero-image {
+        img#hero-bg {
+            float: left;
+        }
+        img#hero {
+            @include heroImage(20px, 30px, 20px);
+            filter: drop-shadow(16px 16px 10px rgba(0, 0, 0, 0.2));
+        }
+    }
+}

@@ -1,0 +1,256 @@
+//$susy: (container: $final, columns: 12, gutters: 1 / 4, math: fluid, output: float, gutter-position: inside);
+@font-face {
+    font-family: 'gotham_htflight';
+    src: url("../fonts/gothamhtf_light-webfont.eot");
+    src: url("../fonts/gothamhtf_light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gothamhtf_light-webfont.woff") format("woff"), url("../fonts/gothamhtf_light-webfont.ttf") format("truetype"), url("../fonts/gothamhtf_light-webfont.svg#gotham_htflight") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'gotham_htfbook';
+    src: url("../fonts/gothamhtf_book-webfont.eot");
+    src: url("../fonts/gothamhtf_book-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gothamhtf_book-webfont.woff") format("woff"), url("../fonts/gothamhtf_book-webfont.ttf") format("truetype"), url("../fonts/gothamhtf_book-webfont.svg#gotham_htfbook") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.container {
+    @include container;
+    padding: 15px;
+    @media (min-width: $final) {
+        padding: 15px 0px;
+    }
+}
+
+//admin
+.admin-menu:not(.page-admin) {
+    margin-top: 0px !important;
+}
+
+#admin-menu:not(.page-admin) {
+    display: none;
+}
+
+//olark
+#habla_beta_container_do_not_rely_on_div_classes_or_names{
+    display: block;
+
+    #habla_window_div #habla_topbar_div{
+        background-color: $union;
+    }
+
+    #habla_expanded_div a{
+        display: none !important;
+    }
+
+    #habla_window_div .habla_offline_submit_input{
+        background: $union;
+        text-transform: uppercase;
+
+        &:hover{
+            background: darken($union, 20%);
+        }
+    }
+}
+
+//global layout styles
+#email-signup-overlay {
+    form {
+        width: 90%;
+        max-width: $tablet;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        label {
+            color: #fff;
+            text-transform: uppercase;
+            @include medium;
+            font-size: 25px;
+            text-align: center;
+            @media (min-width: $phone) {
+                font-size: 32px;
+                line-height: 32px;
+            }
+            @media (min-width: $tablet) {
+                font-size: 52px;
+                line-height: 52px;
+            }
+        }
+        input[type="email"] {
+            width: 100%;
+            max-width: $lgPhone;
+            display: block;
+            margin: 15px auto;
+            border: none;
+            border: 1px solid $union;
+            padding: 10px 15px;
+            font-size: 14px;
+            @media (min-width: $tablet) {
+                font-size: 28px;
+                line-height: 28px;
+            }
+        }
+        input[type="submit"] {
+            @include btn;
+            width: 100%;
+            max-width: $lgPhone;
+            margin: 0 auto;
+            display: block;
+            background-color: $union;
+            color: #fff;
+            font-size: 14px !important;
+            padding: 10px;
+            &:hover {
+                background-color: #fff;
+                color: $union;
+                border-color: #fff;
+            }
+            @media (min-width: $tablet) {
+                width: 100%;
+                font-size: 28px !important;
+                line-height: 28px !important;
+            }
+        }
+    }
+}
+
+*::selection {
+    color: $union;
+}
+
+iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="email"], input[type="password"],
+select, textarea {
+    &:focus {
+        outline: none;
+        border-color: $union;
+        box-shadow: 0px 0px 15px $union;
+        border: none;
+    }
+}
+
+.item-list, .pager {
+    width: 100%;
+    float: left;
+}
+
+h1, h2, h3,
+h4, h5, h6,
+a, address, li,
+div, label, p {
+    color: $dk-gray;
+}
+
+h1, h2, h3 {
+    @include bold;
+
+    span, strong, a{
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+}
+
+h4, h5, h6,
+th {
+    @include medium;
+
+    span, strong, a{
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+}
+
+p, td, li,
+a, span, address,
+input, label, select
+div, .description{
+    @include book;
+
+    span, strong, a{
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+}
+
+html {
+    body {
+        width: 100%;
+        float: left;
+        overflow-x: hidden;
+        opacity: 0;
+        animation: onload 1s normal forwards ease-in;
+        @keyframes onload {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        main {
+            padding-bottom: 50px;
+        }
+        main, .region-content {
+            width: 100%;
+            min-height: calc(100vh - 90px);
+            float: left;
+            section#page-header {
+                text-align: center;
+                border-bottom: 1px solid $dk-gray;
+                h1 {
+                    @include pageHeader(16px,  28px, 52px, $dk-gray);
+                }
+                p {
+                    width: 100%;
+                    padding-bottom: 25px;
+                    font-size: 12px;
+                    line-height: 12px;
+                    margin: 0px;
+                    text-transform: uppercase;
+                    @media (min-width: $lgPhone) {
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                    @media (min-width: $desktop) {
+                        font-size: 20px;
+                        line-height: 22px;
+                    }
+                }
+            }
+            section {
+                width: 100%;
+                float: left;
+            }
+
+            iframe, .media_embed, .file-video{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+
+                .content, .media-youtube-video, .media-vime-video{
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

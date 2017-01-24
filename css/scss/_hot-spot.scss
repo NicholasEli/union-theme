@@ -1,0 +1,11 @@
+div.hot-spot-container{
+    overflow-x: hidden;
+    .swiper-container{
+        .swiper-wrapper{
+            white-space: nowrap;
+            .swiper-slide{
+                display: inline-block;
+            }
+        }
+    }
+}

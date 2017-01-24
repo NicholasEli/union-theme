@@ -1,0 +1,134 @@
+extends ./layout.pug
+block content
+	main#binding-page
+		section#page-header
+			h1 Ultra FC
+			p Powered By Forged Carbon
+		section#binding-swiper
+			div.binding-swiper-container.container
+				div.swiper-wrapper
+					div.swiper-slide
+						img(src="https://www.unionbindingcompany.com/sites/default/files/binding/hero/UNION_BINDING_HERO-FC_01.png")
+					div.swiper-slide
+						img(src="https://www.unionbindingcompany.com/sites/default/files/binding/hero/UNION_BINDING_HERO-FC_01.png")
+					div.swiper-slide
+						img(src="https://www.unionbindingcompany.com/sites/default/files/binding/hero/UNION_BINDING_HERO-FC_01.png")
+				div.swiper-button-prev
+				div.swiper-button-next
+		section#colorways
+			.container
+				label colorways:
+					div.column.swatch
+						div.model_info--swatch
+							a(href="#", data-hero="https://www.unionbindingcompany.com/sites/default/files/binding/hero/UNION_BINDING_HERO-ULTRA_01.png" data-style="white-black").active
+								img(src="https://www.unionbindingcompany.com/sites/default/files/binding/colorway/UNION_BINDING_COLOR_SWATCHES-ULTRA_01.jpg", title="white-black")
+							a(href="#", data-hero="https://www.unionbindingcompany.com/sites/default/files/binding/hero/UNION_BINDING_HERO-ULTRA_01.png" data-style="white-black")
+								img(src="https://www.unionbindingcompany.com/sites/default/files/binding/colorway/UNION_BINDING_COLOR_SWATCHES-ULTRA_01.jpg", title="white-black")
+							a(href="#", data-hero="https://www.unionbindingcompany.com/sites/default/files/binding/hero/UNION_BINDING_HERO-ULTRA_01.png" data-style="white-black")
+								img(src="https://www.unionbindingcompany.com/sites/default/files/binding/colorway/UNION_BINDING_COLOR_SWATCHES-ULTRA_01.jpg", title="white-black")
+		section#price
+			.container
+				p $399.95
+		section#video-buy-size
+			.container
+				a(href="#") video
+				a(href="#") buy now
+				a(href="#") size chart
+		section#key-features
+			.container
+				#features-title
+					h6 Key Features
+				.feature
+					h4 X-Carb Baseplate
+					p Union proudly offers a lifetime warranty on baseplates and heelcups. If you break, or even crack your baseplate or heelcup during riding, we’ll replace it for life. Guaranteed. All other parts are covered for 1 year from date of purchase.
+				.feature
+					h4 FC Vaporlite
+					p Union proudly offers a lifetime warranty on baseplates and heelcups. If you break, or even crack your baseplate or heelcup during riding, we’ll replace it for life. Guaranteed. All other parts are covered for 1 year from date of purchase.
+				#binding-weight
+					p BINDING WEIGHT: XXXg
+		section#technology
+			.container
+				#technology-title
+					h6 technology
+				div.tech
+					img(src="../images/vaporlite.png")
+				div.tech
+					img(src="../images/forged-carbon.png")
+				div.tech
+					img(src="../images/magnesium.png")
+				div.tech
+					img(src="../images/exo-frame.png")
+		section#binding-chart
+			.container
+				div#baseplate-stiffness.chart
+					h4 Baseplate Stiffness
+					svg(x="0px", y="0px", height="160", width="160")
+						circle(cx="80", cy="80", r="70", stroke="#e45525", stroke-width="1", fill="#D0D1D3")
+						circle(data-percent="50", cx="80", cy="80", r="60", fill="#fff", stroke="#59585B", stroke-width="20", opacity="1")#baseplate-radial.radial-graph
+						circle(cx="80", cy="80", r="60", stroke="#e45525", stroke-width="1", fill="#fff")
+						g(x="0px", y="0px")
+							text(data-percent="50", x="48", y="90", fill="#949699")#baseplate-percent
+					p Very Flexible
+				div#baseplate-stiffness.chart
+					h4 Highback Stiffness
+					svg(x="0px", y="0px", height="160", width="160")
+						circle(cx="80", cy="80", r="70", stroke="#e45525", stroke-width="1", fill="#D0D1D3")
+						circle(data-percent="27", cx="80", cy="80", r="60", fill="#fff", stroke="#59585B", stroke-width="20", opacity="1")#highback-radial.radial-graph
+						circle(cx="80", cy="80", r="60", stroke="#e45525", stroke-width="1", fill="#fff")
+						g(x="0px", y="0px")
+							text(data-percent="27", x="48", y="90", fill="#949699")#highback-percent
+					p Medium Flex
+				div#baseplate-stiffness.chart
+					h4 Disk Type
+					img(src="../images/baseplate.png")
+					p COMPATIBLE W ITH 4x4, 4x2, CHANNEL
+		section#footer-stats
+			.container
+				div.horizontal-stat
+					div.horizontal-stat-inner
+						h6 ALL NEW FC HIGHBACK
+						p With testing assistance from Bryan Iguchi, Gigi Ruf and Travis Rice, the Ultra underwent two full seasons of use and abuse. Logging more airtime than MJ, the Ultra has proven itself for versatility and durability.
+				div.horizontal-stat
+					div.horizontal-stat-inner
+						h6 ALL NEW FC HIGHBACK
+						p With testing assistance from Bryan Iguchi, Gigi Ruf and Travis Rice, the Ultra underwent two full seasons of use and abuse. Logging more airtime than MJ, the Ultra has proven itself for versatility and durability.
+				div.horizontal-stat
+					div.horizontal-stat-inner
+						h6 ALL NEW FC HIGHBACK
+						p With testing assistance from Bryan Iguchi, Gigi Ruf and Travis Rice, the Ultra underwent two full seasons of use and abuse. Logging more airtime than MJ, the Ultra has proven itself for versatility and durability.
+				div.grid-stat
+					h6 HIGHBACK
+					p FC SYMMETRIC
+				div.grid-stat
+					h6 Straps
+					p FC SYMMETRIC
+				div.grid-stat
+					h6 baseplate
+					p FC SYMMETRIC
+				div.grid-stat
+					h6 heelcup
+					p FC SYMMETRIC
+				div.grid-stat
+					h6 bushing
+					p INTEGRATED FC VAPORLITE 3.0
+				div.grid-stat
+					h6 buckles
+					p FC SYMMETRIC
+		section#prev-video-size-next
+			.container
+				div#prev-binding
+					a(href="#") &#60; View Previous Binding
+				div#video-size
+					a(href="#") video
+					a(href="#") size chart
+				div#next-binding
+					a(href="#") View Next Binding &gt;
+
+
+
+
+
+
+
+
+

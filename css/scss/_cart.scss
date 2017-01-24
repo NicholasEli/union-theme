@@ -1,0 +1,151 @@
+.page-shopping-cart, .page-checkout {
+    .region-content {
+        width: 100%;
+        min-height: calc(100vh - 90px);
+        float: left;
+        header {
+            @include container;
+            padding: 15px;
+            h1 {
+                color: $union;
+                text-transform: uppercase;
+            }
+        }
+        form {
+            @include container;
+            padding: 15px;
+            table {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 15px;
+                .views-align-right {
+                    text-align: center;
+                }
+                thead {
+                    tr {
+                        background-color: transparent;
+                        th {
+                            padding: 15px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        background-color: transparent;
+                        td {
+                            padding: 15px;
+                            img {
+                                max-width: 100px;
+                                margin: 15px auto;
+                                display: block;
+                            }
+                            input[type="text"] {
+                                text-align: center;
+                                color: $dk-gray;
+                                border-radius: 0;
+                                background-color: $lt-gray;
+                                border-style: solid;
+                                border-width: 0;
+                                border-color: $lt-gray;
+                                box-shadow: none;
+                                color: rgba(0, 0, 0, 0.75);
+                                display: block;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        legend {
+            span {
+                color: $union;
+                text-transform: uppercase;
+            }
+        }
+        label, .description {
+            font-size: 12px;
+            color: $union;
+            text-transform: uppercase;
+        }
+        input[type="text"], input[type="tel"], select {
+            color: $dk-gray;
+            border-radius: 0;
+            background-color: #fafafa;
+            border-style: solid;
+            border-width: 0;
+            border-color: $lt-gray;
+            box-shadow: none;
+            color: rgba(0, 0, 0, 0.75);
+            display: block;
+            font-size: 0.875rem;
+            height: 2.3125rem;
+            margin: 0 0 1rem 0;
+            padding: 0.5rem;
+            width: 100%;
+        }
+        input[type="submit"] {
+            padding: 5px;
+            background-color: transparent;
+            color: $union;
+            border: 1px solid $union;
+            border-radius: 6px;
+            text-transform: uppercase;
+            font-size: 12px;
+            margin: 5px;
+            &:hover {
+                background-color: $union;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+    .checkout-buttons {
+        width: 100%;
+        float: left;
+    }
+    //step 1 of
+    .commerce-line-item-views-form {
+        .line-item-summary {
+            padding: 15px;
+        }
+    }
+    //step 2 of
+    #customer-profile-billing-ajax-wrapper, #customer-profile-shipping-ajax-wrapper, #commerce-shipping-service-ajax-wrapper
+    #commerce-checkout-coupon-ajax-wrapper, #commerce-shipping-service-ajax-wrapper,
+    #commerce-checkout-coupon-ajax-wrapper {
+        width: 100%;
+        float: left;
+        margin-bottom: 15px;
+        @media (min-width: $tablet) {
+            width: 50%;
+            padding: 15px;
+        }
+    }
+    //step 3 of
+    .checkout_review table, .commerce_payment {
+        width: 100%;
+        float: left;
+    }
+    .checkout_review {
+        label {
+            color: $dk-gray;
+        }
+    }
+    .commerce_payment {
+        max-width: $lgPhone;
+        margin: 15px 0px;
+    }
+    //step 4 of
+    .checkout-completion-message {
+        text-align: center;
+        img {
+            max-width: 200px;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}

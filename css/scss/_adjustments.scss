@@ -1,0 +1,46 @@
+main#adjustments{
+	section#hero-image{
+		overflow-x: hidden;
+		img#hero-bg{
+			@media (orientation: portrait) and (max-width: $tablet){
+				width: auto;
+				max-width: none;
+				height: 50vh;
+				right: 50vw;
+			}
+		}
+
+		div#hero-text{
+			@media (min-width: $tablet){
+				width: 27.21854304635762%;
+				top: 12.5%;
+				left: 54.03973509933775%;
+				padding: 0px;
+				background-color: transparent;
+			}
+		}
+	}
+
+	section#grid{
+		div.container{
+			.grid-item{
+				.grid-border{
+					.grid-image{
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+
+			.grid-item:nth-of-type(-n+3){
+				@media (min-width: $tablet){
+					width: calc(100% / 3);
+				}
+
+				@media (min-width: $desktop){
+					width: calc(100% / 3);
+				}
+			}
+		}
+	}
+}

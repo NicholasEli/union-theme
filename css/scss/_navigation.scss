@@ -1,0 +1,247 @@
+#nav-menu {
+    width: 100%;
+    height: 50px;
+    float: left;
+    background-color: #000;
+    z-index: 9998;
+    #nav-icon {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+        background-color: #000;
+        a {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 10px;
+            left: 10px;
+            &:hover {
+                svg {
+                    * {
+                        fill: #fff !important;
+                    }
+                }
+            }
+            svg {
+                width: 100%;
+                height: 100%;
+                * {
+                    transition: all 200ms;
+                }
+            }
+        }
+    }
+    #nav-menu-wrapper {
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        nav {
+            width: calc(100% - 110px);
+            max-width: $final - 50px;
+            height: auto;
+            margin: 0 auto;
+            padding: 0px 15px;
+            #nav-left, #nav-right {
+                display: none;
+                width: calc(50% - 145px);
+                float: left;
+                top: 16.5px;
+                @media (min-width: $desktop) {
+                    display: block;
+                    width: calc(50% - 90px);  
+                }
+                @media (min-width: $final) {
+                    width: calc(50% - 145px);
+                }
+                > ul {
+                    width: 100%;
+                    display: flex;
+                    > li {
+                        color: #fff;
+                        flex: 1;
+                        margin: 0px;
+                        &:hover {
+                            > a, label {
+                                cursor: pointer;
+                                &::before {
+                                    top: -20px;
+                                }
+                            }
+                            img {
+                                transform: translateY(2px);
+                            }
+                            input[type="checkbox"] {
+                                cursor: pointer;
+                            }
+                        }
+                        > a, label {
+                            margin: 0px;
+                            @include book;
+                            color: #fff;
+                            text-transform: uppercase;
+                            font-size: 10px;
+                            display: inline;
+                            @media (min-width: 1020px){
+                                font-size: 12px;
+                            }
+                            &::before {
+                                content: ' ';
+                                position: absolute;
+                                top: -40px;
+                                left: 0px;
+                                width: 100%;
+                                height: 5px;
+                                background-color: #fff;
+                                transition: all 200ms;
+                            }
+                            img {
+                                width: 7px;
+                                height: 3px;
+                                left: 5px;
+                                vertical-align: middle;
+                                transition: all 200ms;
+                            }
+                        }
+                    }
+                    .dropdown-branch {
+                        transition: all 500ms ease;
+                        .dropdown-leaf {
+                            display: block;
+                            opacity: 0;
+                            min-width: 315px;
+                            position: absolute;
+                            top: -100vh;
+                            padding: 15px;
+                            background-color: rgba(255, 255, 255, 0.9);
+                            border: 1px solid $lt-gray;
+                            z-index: 9999;
+                            transition: top 200ms 200ms, opacity 200ms;
+                            &::before {
+                                content: '';
+                                width: 0;
+                                height: 0;
+                                display: block;
+                                position: absolute;
+                                top: -18px;
+                                border-color: transparent transparent rgba(255, 255, 255, 0.9) transparent;
+                                border-style: solid;
+                                border-width: 9.5px;
+                            }
+                            ul {
+                                display: block;
+                                text-align: left;
+                                li {
+                                    margin-bottom: 0px;
+                                    display: block;
+                                    flex: none;
+                                    &:hover {
+                                        a {
+                                            color: $union;
+                                        }
+                                    }
+                                    a {
+                                        color: $icon-gray;
+                                        text-transform: uppercase;
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                        .aria-left {
+                            &::before {
+                                top: -18px;
+                                left: 18px;
+                            }
+                        }
+                        .aria-right {
+                            &::before {
+                                right: 11px;
+                            }
+                        }
+                        input[type="checkbox"] {
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            opacity: 0;
+                            margin: 0px;
+                            display: none;
+                        }
+                        input[type="checkbox"]:checked ~ .dropdown-leaf {
+                            top: 25px;
+                            margin-top: 0px;
+                            opacity: 1;
+                            transition: opacity 200ms 200ms, top 0ms 0ms;
+                        }
+                    }
+                }
+            }
+            #nav-left {
+                > ul {
+                    float: left;
+                    text-align: left;
+                    .dropdown-branch {
+                        .dropdown-leaf {
+                            left: 83px;
+                            &::before {
+                                left: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+            #nav-middle {
+                width: 100%;
+                float: left;
+                text-align: center;
+                @media (min-width: $desktop) {
+                    max-width: 180px;
+                    display: block;
+                }
+
+                @media (min-width: $final){
+                    max-width: 260px;
+                    font-size: 23px;
+                }
+                h2 {
+                    top: 5px;
+                    color: #fff;
+                    font-size: 13px;
+                    text-transform: uppercase;
+                    margin: 0px;
+                    @include medium;
+                    @media (min-width: $desktop) {
+                        font-size: 15px;
+                    }
+
+                    @media (min-width: $final){
+                        font-size: 23px;
+                    }
+                }
+            }
+            #nav-right {
+                > ul {
+                    float: right;
+                    text-align: right;
+                    .dropdown-branch {
+                        .dropdown-leaf {
+                            right: -35px;
+                            &::before{
+                                right: 22px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#team-dropdown{
+    left: 25px !important;
+}

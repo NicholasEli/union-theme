@@ -1,0 +1,53 @@
+.page-warranty-request-form {
+    section#warranty-intro {
+        div.container {
+            max-width: $desktop;
+            padding: 30px 15px;
+            p {
+                color: $lt-gray;
+                text-align: center;
+                font-size: 16px;
+                line-height: 18px;
+            }
+        }
+    }
+    #webform-ajax-wrapper-518 {
+        width: 100%;
+        float: left;
+        margin-bottom: 50px;
+        #webform-client-form-518 {
+            @include container;
+            max-width: $desktop;
+            border: 1px solid $lt-gray;
+            padding: 15px;
+            label {
+                color: $lt-gray;
+                font-size: 22px;
+                line-height: 22px;
+                text-transform: uppercase;
+                margin-bottom: 5px;
+                .form-required {
+                    color: $union;
+                }
+            }
+            .description {
+                color: $lt-gray;
+                font-size: 10px;
+                letter-spacing: 1px;
+                margin-top: 5px;
+            }
+            .form-file{
+                margin-bottom: 10px;
+            }
+            @include inputStyle;
+            .form-actions {
+                margin: 0px;
+            }
+            input[type="submit"] {
+                @include btn;
+                display: block;
+                margin: 5px 0px;
+            }
+        }
+    }
+}

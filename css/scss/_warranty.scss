@@ -1,0 +1,132 @@
+main#warranty {
+    section.warranty-section {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid $lt-gray;
+        div.container {
+            max-width: 715px;
+            div.warranty-icon {
+                width: 100%;
+                float: left;
+                margin-bottom: 25px;
+                svg {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            div.warranty-title {
+                width: 100%;
+                //float: left;
+                margin-bottom: 15px;
+                h4 {
+                    margin: 0px;
+                    color: $dk-gray;
+                    text-transform: uppercase;
+                    font-size: 25px;
+                    line-height: 27px;
+                    @include book;
+                }
+            }
+            div.warranty-text {
+                width: 100%;
+                float: left;
+                padding: 0px 15px;
+                margin-bottom: 15px;
+                @media (min-width: $tablet){
+                	margin-bottom: 0px;
+                }
+                div.int-wrapper{
+                	width: 40px;
+                	height: 40px;
+                	margin: 15px auto;
+                	border-radius: 100%;
+                	border: 3px solid $union;
+	                span.int {
+	                	position: absolute;
+	                	top: 50%;
+	                	left: 50%;
+	                	transform: translate(-50%, -50%);
+	                    color: $union;
+	                    font-size: 22px;
+	                    line-height: 22px;
+	                }
+	            }
+                a {
+                    @include btn;
+                    width: auto;
+                    padding: 5px 10px;
+                    @media (min-width: $tablet) {
+                        width: auto;
+                    }
+                }
+            }
+            div.warranty-disclaimer {
+                width: 100%;
+                max-width: 390px;
+                margin: 15px auto;
+                display: inline-block;
+                p {
+                    font-size: 10px;
+                    color: $lt-gray;
+                }
+            }
+        }
+    }
+    section#baseplats-heelcups, section#what-to-do {
+    	svg{
+    		transform: scale(0.8, 0.8);
+    		animation: scaleSvg 2s forwards;
+    		@keyframes scaleSvg{
+    			from{transform: scale(0.8, 0.8);}
+    			to{transform: scale(1,1);}
+    		}
+    	}
+    }
+    section#what-to-do {
+        div.warranty-text {
+            @media (min-width: $tablet) {
+                width: calc(100% / 3);
+            }
+            p {
+                margin-bottom: 15px;
+                @media (min-width: $tablet) {
+                    min-height: 100px;
+                }
+            }
+        }
+    }
+    section#warning {
+        border: none;
+
+        svg{
+        	transform: rotate(0deg);
+
+        	
+        	animation: warningSvg 10s infinite;
+
+        	@keyframes warningSvg{
+        		0% {transform: rotate(0deg);}
+        		24% {transform: rotate(0deg);}
+        		25% {transform: rotate(90deg);}
+        		49% {transform: rotate(90deg);}
+        		50% {transform: rotate(180deg);}
+        		74% {transform: rotate(180deg);}
+        		75% {transform: rotate(270deg);}
+        		99% {transform: rotate(270deg);}
+        		100% {transform: rotate(360deg);}
+        	}
+        	
+        }
+    }
+
+    section#lost-parts a{
+        border: none;
+        padding: 0px;
+        color: $union;
+
+        &:hover{
+            background-color: transparent;
+            color: $dk-gray;
+        }
+    }
+}

@@ -1,0 +1,93 @@
+.vid-placeholder {
+    opacity: 0;
+}
+
+.fadein {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.body-menu-open {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.section-title {
+    margin: 30px 0px;
+    text-transform: uppercase;
+    text-align: center;
+    h2 {
+        margin-bottom: 30px;
+        color: $dk-gray;
+        font-size: 52px;
+        line-height: 52px;
+        font-weight: 700;
+    }
+}
+
+.overflowhidden {
+    height: 100%;
+    overflow: hidden;
+}
+
+@mixin close_overlay{
+    div.close-overlay {
+        width: 40px;
+        height: 50px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        transition: all 200ms;
+        &:hover {
+            cursor: pointer;
+            transform: rotate(-90deg);
+            div.overlay-bar-top {
+                background-color: $union;
+                transform: rotate(45deg);
+            }
+            div.overlay-bar-middle {
+                background-color: $union;
+                opacity: 0;
+            }
+            div.overlay-bar-bottom {
+                background-color: $union;
+                transform: rotate(-45deg);
+            }
+        }
+        div {
+            width: 100%;
+            height: 3px;
+            transition: all 200ms;
+            background-color: #fff;
+        }
+        div.overlay-bar-top {
+            top: 23px !important;
+            transform: rotate(60deg);
+            background-color: #ffffff;
+        }
+        div.overlay-bar-middle {
+            top: 20px;
+            opacity: 1;
+            background-color: #ffffff;
+        }
+        div.overlay-bar-bottom {
+            top: 18px !important;
+            transform: rotate(-60deg);
+            background-color: #ffffff;
+        }
+    }
+}
+
+.butthole-overlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    z-index: -1;
+    transition: all 200ms;
+
+    @include close_overlay;
+}

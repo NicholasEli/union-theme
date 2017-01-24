@@ -1,0 +1,50 @@
+main#error{
+	#error-message{
+		width: 100%;
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+
+		h1, h3, p{
+			margin: 0px;
+			text-transform: uppercase;
+			color: $union;
+			@include bold;
+		}
+
+		h1{
+			font-size: 80px;
+			line-height: 80px;
+			
+			@media (min-width: $tablet){
+				font-size: 120px;
+				line-height: 120px;
+			}
+		}
+
+		h3{
+			font-size: 18px;
+			line-height: 18px;
+
+			@media (min-width: $tablet){
+				font-size: 48px;
+				line-height: 48px;
+			}
+		}
+
+		p{
+			font-size: 10px;
+			a{
+				font-size: inherit;
+				text-decoration: underline;
+			}
+
+			@media (min-width: $tablet){
+				font-size: 18px;
+				line-height: 18px;
+			}
+		}
+	}
+}

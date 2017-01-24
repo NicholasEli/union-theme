@@ -1,0 +1,360 @@
+// Warranty - Request Form Pages
+
+.page-warranty-application {
+    // Fancy List Items
+    .warranty-list {
+        text-align: left;
+        max-width: 380px;
+        padding: 0 30px;
+        margin: 0 auto;
+        li {
+            list-style: square;
+        }
+    }
+    // Reason Form
+    #warranty-reason-form {
+        .fieldset-legend {
+            @include pageHeader(14px, 18px, 20px, $dk-gray);
+            display: block;
+            @include medium;
+        }
+        .form-item {
+            width: 100%;
+            margin: 0px 0px 5px 0px;
+            label {
+                @include pageHeader(12px, 16px, 18px, $dk-gray);
+                @include medium;
+                margin: 0px 0px 15px;
+                padding: 0px;
+                text-transform: uppercase;
+                color: $lt-gray;
+                letter-spacing: 1px;
+            }
+            @include inputStyle;
+            select {
+                padding: 10px;
+                option {
+                    padding: 10px;
+                    color: $dk-gray;
+                    font-size: 14px;
+                    line-height: 14px;
+                }
+                option:nth-of-type(even) {
+                    background-color: #e2e2e2;
+                }
+            }
+            textarea {
+                height: 260px;
+                resize: none;
+                border: none;
+                font-size: 14px;
+                line-height: 14px;
+                background-color: $lt-gray;
+                color: $dk-gray;
+                padding: 10px;
+            }
+            .grippie {
+                display: none;
+            }
+            .form-required {
+                color: $union;
+            }
+            .form-item {
+                margin: 0px;
+            }
+        }
+    }
+    // Responses
+    .response {
+        // Warning
+        &.warning {
+            text-align: left;
+            padding: 30px;
+            background-color: $union;
+            background-image: none;
+            p {
+                color: white;
+                margin-bottom: 20px;
+                a {
+                    color: white;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    //
+    #warranty-intro {
+        text-align: center;
+        .container {
+            @include container;
+            max-width: $tablet;
+        }
+    }
+	.webform-confirmation, .links{
+		@include container;
+            max-width: $tablet;
+            padding: 15px;
+	}
+
+	.links{
+        	a{
+        		color: $union;
+        	}
+        }
+    #webform-ajax-wrapper-641{
+        width: 100%;
+        float: left;
+        margin-bottom: 50px;
+        overflow: hidden;
+
+        #webform-client-form-641 {
+            @include container;
+            max-width: $tablet;
+            padding: 15px;
+
+            .fieldset-legend {
+                @include pageHeader(14px, 18px, 20px, $dk-gray);
+                display: block;
+                @include medium;
+            }
+            .form-item {
+                width: 100%;
+                margin: 0px 0px 5px 0px;
+                label {
+                    @include pageHeader(12px, 16px, 18px, $dk-gray);
+                    @include medium;
+                    margin: 0px 0px 15px;
+                    padding: 0px;
+                    text-transform: uppercase;
+                    color: $lt-gray;
+                    letter-spacing: 1px;
+                }
+                @include inputStyle;
+                select {
+                    padding: 0px;
+                    option {
+                        padding: 10px;
+                        color: $dk-gray;
+                        font-size: 14px;
+                        line-height: 14px;
+                    }
+                    option:nth-of-type(even) {
+                        background-color: #e2e2e2;
+                    }
+                }
+                textarea {
+                    height: 260px;
+                    resize: none;
+                    border: none;
+                    font-size: 14px;
+                    line-height: 14px;
+                    background-color: $lt-gray;
+                    color: $dk-gray;
+                    padding: 10px;
+                }
+                .grippie {
+                    display: none;
+                }
+                .form-required {
+                    color: $union;
+                }
+                .form-item {
+                    margin: 0px;
+                }
+            }
+            .webform-component-fieldset {
+                width: 100%;
+                float: left;
+                padding-bottom: 45px;
+                &::after {
+                    content: "";
+                    width: 200vw;
+                    height: 1px;
+                    position: absolute;
+                    left: -100%;
+                    bottom: 15px;
+                    background-color: $dk-gray;
+                }
+            }
+            .webform-component--contact-information {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                .form-item {
+                    width: 100%;
+                    float: left;
+                    @media (min-width: $tablet) {
+                        width: calc(50% - 15px);
+                    }
+                }
+                .form-item:nth-of-type(even) {
+                    @media (min-width: $tablet) {
+                        float: right;
+                    }
+                }
+            }
+            .webform-component--location-information, .webform-component--shipping-information, .webform-component--binding-information,
+            .webform-component--process-application {
+                &::before {
+                    content: '';
+                    width: 40px;
+                    height: 40px;
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    background-size: 40px auto;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    @media (min-width: $tablet) {
+                        width: 100px;
+                        height: 100px;
+                        top: 50%;
+                        right: 14.322916666666666%;
+                        transform: translate(0%, -50%);
+                        background-size: 100px auto;
+                    }
+                }
+                .form-item {
+                    @media (min-width: $tablet) {
+                        max-width: 320px;
+                    }
+                }
+            }
+            .webform-component--location-information {
+                &::before {
+                    background-image: url("../images/warranty/globe-empty.png");
+                    @media (min-width: $tablet) {
+                        background-size: 80px auto;
+                    }
+                }
+            }
+            .webform-component--location-information.field-complete {
+                &::before {
+                    background-image: url("../images/warranty/globe.png");
+                }
+            }
+            .webform-component--location-information {
+                select {
+                    padding: 10px;
+                }
+            }
+            .webform-component--shipping-information {
+                &::before {
+                    background-image: url("../images/warranty/globe-shipping-empty.png");
+                }
+                select {
+                    padding: 10px;
+                }
+            }
+            .webform-component--shipping-information.field-complete {
+                &::before {
+                    background-image: url("../images/warranty/globe-shipping.png");
+                }
+            }
+            .webform-component--binding-information {
+                &::before {
+                    background-image: url("../images/warranty/globe-information-empty.png");
+                }
+                p {
+                    font-size: 10px;
+                    line-height: 10px;
+                    margin-bottom: 25px;
+                }
+                a {
+                    color: $union;
+                    text-decoration: uppercase;
+                    margin: 0px;
+                }
+                select {
+                    padding: 10px;
+                }
+            }
+            .webform-component--binding-information.field-complete {
+                &::before {
+                    background-image: url("../images/warranty/globe-information.png");
+                }
+            }
+            .webform-component--warranty-information {
+                p {
+                    font-size: 10px;
+                    line-height: 10px;
+                    margin-bottom: 25px;
+                }
+                a {
+                    color: $union;
+                    text-decoration: uppercase;
+                    margin: 0px;
+                }
+                .webform-component--warranty-information--warranty-issue {
+                    @media (min-width: $tablet) {
+                        max-width: 320px;
+                    }
+                }
+            }
+            .webform-datepicker {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                select {
+                    padding: 10px;
+                }
+                input.webform-calendar {
+                    display: none !important;
+                }
+                .form-item {
+                    @media (min-width: $tablet) {
+                        width: calc(100% / 3.5);
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .webform-component--purchase-information {
+                @media (min-width: $tablet) {
+                    max-width: 320px;
+                }
+                .description {
+                    display: none;
+                }
+                input {
+                    margin-bottom: 10px;
+                }
+            }
+            .webform-component--process-application {
+                &::before {
+                    background-image: url("../images/warranty/globe-finished-empty.png");
+                }
+                &::after {
+                    content: none;
+                }
+                p {
+                    color: $dk-gray;
+                    font-size: 10px;
+                }
+            }
+            .webform-component--process-application.field-complete {
+                &::before {
+                    background-image: url("../images/warranty/globe-finished.png");
+                }
+            }
+            #edit-webform-ajax-submit-641 {
+                padding: 10px;
+                color: $dk-gray;
+
+                &:hover{
+                	color: #fff;
+                }
+            }
+            div.warning{
+				background-image: none;
+				background-color: none;
+				color: $union;
+            }
+
+            .form-actions {
+                width: 100%;
+                float: left;
+            }
+        }
+    }
+}

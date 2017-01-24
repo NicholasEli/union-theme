@@ -1,0 +1,118 @@
+extends ./layout.pug
+block content
+	main#social
+		section#page-header
+			h1 The Union Feed
+			p Content Filter:
+			form
+				div
+					input(type="checkbox" id="team" value="team") 
+					label Team
+				div
+					input(type="checkbox" id="videos" value="videos")
+					label Videos
+				div
+					input(type="checkbox" id="product" value="product")
+					label Product
+				div
+					input(type="checkbox" id="custom-house" value="custom-house") 
+					label Custom House
+				div
+					input(type="checkbox" id="events" value="events")
+					label Events
+		section#social-feed
+			div.container
+				aside#social-sidebar
+					div#hashtag
+						a #unionbindingco
+					div#ig-feed
+						div.ig-img
+							img(src="http://placehold.it/100x100")
+						div.ig-img
+							img(src="http://placehold.it/100x100")
+						div.ig-img
+							img(src="http://placehold.it/100x100")
+						div.ig-img
+							img(src="http://placehold.it/100x100")
+					div#follow
+						p follow union biding co:
+						a
+							i.fa.fa-instagram
+							span Instagram
+						a
+							i.fa.fa-twitter
+							span Twitter
+						a
+							i.fa.fa-facebook
+							span Facebook
+				div#feed
+					div.post.team
+						div.post-wrapper
+							div.post-title
+								h2 Team Name Goes Here
+							div.post-video
+								img(src="http://placehold.it/1000x500")
+								iframe(width="100%", height="100%", src="https://www.youtube.com/embed/rfpFByLo1xo", frameborder="0" allowfullscreen)
+							div.post-text
+								article
+									p COPY GOES HERE DESCRIBING WHATEVER THE CLIP IS ABOUT. #[a LINKS] CAN BE ADDED INLINE.
+							div.date
+								p -04.05.16-
+					div.post.events
+						div.post-wrapper
+							div.post-title
+								h2 Event Name Goes Here
+							div.post-video
+								img(src="http://placehold.it/1000x500")
+								iframe(width="100%", height="100%", src="https://www.youtube.com/embed/rfpFByLo1xo", frameborder="0" allowfullscreen)
+							div.post-text
+								article
+									p COPY GOES HERE DESCRIBING WHATEVER THE CLIP IS ABOUT. #[a LINKS] CAN BE ADDED INLINE.
+							div.date
+								p -04.05.16-
+					div.post.videos
+						div.post-wrapper
+							div.post-title
+								h2 Video Name Goes Here
+							div.post-video
+								img(src="http://placehold.it/1000x500")
+								iframe(width="100%", height="100%", src="https://www.youtube.com/embed/rfpFByLo1xo", frameborder="0" allowfullscreen)
+							div.post-text
+								article
+									p COPY GOES HERE DESCRIBING WHATEVER THE CLIP IS ABOUT. #[a LINKS] CAN BE ADDED INLINE.
+							div.date
+								p -04.05.16-
+					div.post.custom-house
+						div.post-wrapper
+							div.post-title
+								h2 Custom House Name Goes Here
+							div.post-video
+								img(src="http://placehold.it/1000x500")
+								iframe(width="100%", height="100%", src="https://www.youtube.com/embed/rfpFByLo1xo", frameborder="0" allowfullscreen)
+							div.post-text
+								article
+									p COPY GOES HERE DESCRIBING WHATEVER THE CLIP IS ABOUT. #[a LINKS] CAN BE ADDED INLINE.
+							div.date
+								p -04.05.16-
+					div.post.product
+						div.post-wrapper
+							div.post-title
+								h2 Product Name Goes Here
+							div.post-video
+								img(src="http://placehold.it/1000x500")
+								iframe(width="100%", height="100%", src="https://www.youtube.com/embed/rfpFByLo1xo", frameborder="0" allowfullscreen)
+							div.post-text
+								article
+									p COPY GOES HERE DESCRIBING WHATEVER THE CLIP IS ABOUT. #[a LINKS] CAN BE ADDED INLINE.
+							div.date
+								p -04.05.16-
+		section#load-more
+			div#load-more-btn Load More
+
+
+
+
+
+
+
+
